@@ -32,6 +32,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet" />
 
   <!-- Estilo -->
+  <!-- Estilo -->
   <link rel="stylesheet" href="estilo/estilo.css" />
 </head>
 <body>
@@ -179,7 +180,7 @@
   <!-- PRICING -->
   <section id="precos">
     <div class="sep"></div>
-    <div style="padding:8rem 0;background:#080808;">
+    <div style="padding:8rem 0;background:#0E0408;">
       <div class="container">
         <div class="pricing-header reveal">
           <p class="section-pre">Investimento</p>
@@ -361,7 +362,7 @@
   <!-- CONTACT -->
   <section id="contato">
     <div class="sep"></div>
-    <div style="padding:8rem 0;background:#080808;">
+    <div style="padding:8rem 0;background:#0E0408;">
       <div class="container">
         <div class="contact-header reveal">
           <p class="section-pre">Fale comigo</p>
@@ -585,14 +586,14 @@
       errEl.classList.remove('show')
       const locLabel = selectedLoc === 'atelier' ? 'Na Rebecca (ateliê)' : 'A domicílio (minha casa)'
       const e = {
-        flor:   decodeURIComponent('%F0%9F%8C%B8'),
-        pessoa: decodeURIComponent('%F0%9F%91%A4'),
-        unha:   decodeURIComponent('%F0%9F%92%85'),
-        data:   decodeURIComponent('%F0%9F%93%85'),
-        hora:   decodeURIComponent('%E2%8F%B0'),
-        local:  decodeURIComponent('%F0%9F%93%8D'),
-        obs:    decodeURIComponent('%F0%9F%93%9D'),
-        pray:   decodeURIComponent('%F0%9F%99%8F'),
+        flor:   String.fromCodePoint(0x1F338),
+        pessoa: String.fromCodePoint(0x1F464),
+        unha:   String.fromCodePoint(0x1F485),
+        data:   String.fromCodePoint(0x1F4C5),
+        hora:   String.fromCodePoint(0x23F0),
+        local:  String.fromCodePoint(0x1F4CD),
+        obs:    String.fromCodePoint(0x1F4DD),
+        pray:   String.fromCodePoint(0x1F64F),
       }
       const msg =
         `${e.flor} *Agendamento — Rebecca Cerdeira*\n\n` +
