@@ -7,9 +7,9 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --noir:       #000000;
-  --noir2:      #18010100;
-  --noir3:      #110101;
+  --noir:       #220A14;
+  --noir2:      #320E1C;
+  --noir3:      #421228;
   --gold:       #C49A6C;
   --gold-light: #E8C5A0;
   --cream:      #F8F4EF;
@@ -435,7 +435,7 @@ body::before {
 @media (max-width: 768px) { .contact-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 480px) { .contact-grid { grid-template-columns: 1fr; } }
 
-.contact-card { background: #180810; padding: 2rem; transition: background .3s; text-decoration: none; display: block; }
+.contact-card { background: #1A080F; padding: 2rem; transition: background .3s; text-decoration: none; display: block; }
 .contact-card:hover { background: var(--noir2); }
 .contact-icon { font-size: 1.2rem; margin-bottom: 1rem; opacity: .6; transition: opacity .3s; }
 .contact-card:hover .contact-icon { opacity: 1; }
@@ -452,6 +452,68 @@ body::before {
 
 .cta-title { font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3rem); font-weight: 300; font-style: italic; color: var(--cream); margin-bottom: 1rem; }
 .cta-sub { font-size: .8rem; color: rgba(248,244,239,.35); margin-bottom: 2rem; }
+
+
+/* ── SERVICE CHECKBOXES ── */
+.service-checks {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: .4rem;
+}
+.check-item {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  padding: .6rem .75rem;
+  border: 1px solid rgba(196,154,108,.15);
+  background: var(--noir);
+  cursor: pointer;
+  transition: all .2s;
+  user-select: none;
+}
+.check-item:hover {
+  border-color: rgba(196,154,108,.4);
+  background: rgba(196,154,108,.05);
+}
+.check-item input[type=checkbox] {
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  border: 1px solid rgba(196,154,108,.35);
+  background: transparent;
+  cursor: pointer;
+  position: relative;
+  flex-shrink: 0;
+  transition: all .2s;
+}
+.check-item input[type=checkbox]:checked {
+  background: var(--gold);
+  border-color: var(--gold);
+}
+.check-item input[type=checkbox]:checked::after {
+  content: '';
+  position: absolute;
+  top: 2px; left: 4px;
+  width: 4px; height: 7px;
+  border: 1.5px solid var(--noir);
+  border-top: none;
+  border-left: none;
+  transform: rotate(45deg);
+}
+.check-item span {
+  font-size: .75rem;
+  color: rgba(248,244,239,.5);
+  font-family: var(--font-body);
+  font-weight: 300;
+  transition: color .2s;
+}
+.check-item:has(input:checked) {
+  border-color: rgba(196,154,108,.4);
+  background: rgba(196,154,108,.08);
+}
+.check-item:has(input:checked) span {
+  color: var(--gold);
+}
 
 /* ── FOOTER ── */
 footer { background: var(--noir); border-top: 1px solid rgba(196,154,108,.1); padding: 3rem 0; }
