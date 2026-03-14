@@ -7,9 +7,9 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --noir:       #220A14;
-  --noir2:      #320E1C;
-  --noir3:      #421228;
+  --noir:       #000000;
+  --noir2:      #18010100;
+  --noir3:      #110101;
   --gold:       #C49A6C;
   --gold-light: #E8C5A0;
   --cream:      #F8F4EF;
