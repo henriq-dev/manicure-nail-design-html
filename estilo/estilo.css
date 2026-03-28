@@ -124,7 +124,7 @@ body::before {
   height: 56px;
   width: auto;
   object-fit: contain;
-  transition: opacity .3s;
+  transition: opacity .4s;
 }
 .nav-logo:hover .nav-logo-img { opacity: .8; }
 
