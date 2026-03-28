@@ -7,11 +7,15 @@
   <meta name="description" content="Nail design de luxo em Porto Velho. Manicure, pedicure, alongamento e nail art com Rebecca Cerdeira. Agende seu horário." />
   <meta name="keywords" content="manicure porto velho, nail design rondônia, alongamento unhas, nail art, Rebecca Cerdeira" />
 
-  <!-- Open Graph -->
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Rebecca Cerdeira | Nail Design" />
+  <!-- Favicon -->
+  <link rel="icon" href="imagens/logo.jpeg" type="image/jpeg" />
+
+  <!-- Open Graph — aparece ao compartilhar o link no WhatsApp/Instagram -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:title"       content="Rebecca Cerdeira | Nail Design" />
   <meta property="og:description" content="Nail design de luxo em Porto Velho, RO." />
-  <meta property="og:url" content="https://rebeccacerdeira.com.br" />
+  <meta property="og:url"         content="https://rebeccacerdeira.com.br" />
+  <meta property="og:image"       content="https://rebeccacerdeira.com.br/imagens/logo.jpeg" />
 
   <!-- Schema.org -->
   <script type="application/ld+json">
@@ -22,7 +26,7 @@
     "telephone": "+556993174022",
     "address": { "@type": "PostalAddress", "addressLocality": "Porto Velho", "addressRegion": "RO", "addressCountry": "BR" },
     "url": "https://rebeccacerdeira.com.br",
-    "sameAs": ["https://instagram.com/rebeccacerdeira"]
+    "sameAs": ["https://www.instagram.com/naildesignerrebecca/"]
   }
   </script>
 
@@ -31,7 +35,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet" />
 
-  <!-- Estilo -->
   <!-- Estilo -->
   <link rel="stylesheet" href="estilo/estilo.css" />
 </head>
@@ -42,8 +45,8 @@
     <div class="container">
       <div class="nav-inner">
         <a href="#hero" class="nav-logo">
-          <span class="nav-logo-name">Rebecca</span>
-          <span class="nav-logo-sub">Nail Design</span>
+          <!-- Logo da Rebecca Cerdeira — imagem enviada pelo cliente -->
+          <img src="imagens/logo.jpeg" alt="Rebecca Cerdeira Nail Design" class="nav-logo-img" />
         </a>
         <ul class="nav-links">
           <li><a href="#servicos">Serviços</a></li>
@@ -52,7 +55,7 @@
           <li><a href="#agenda">Agenda</a></li>
           <li><a href="#contato">Contato</a></li>
         </ul>
-        <a href="https://wa.me/5569993174022?text=Olá%20Rebecca!%20Gostaria%20de%20agendar." target="_blank" class="nav-cta">Agendar</a>
+        <a href="https://wa.me/5569993174022?text=Olá%20Rebecca!%20Gostaria%20de%20agendar." target="_blank" rel="noopener noreferrer" class="nav-cta">Agendar</a>
         <button class="nav-burger" id="burger" aria-label="Menu">
           <span></span><span></span><span></span>
         </button>
@@ -67,7 +70,7 @@
     <a href="#galeria" class="mob-link">Galeria</a>
     <a href="#agenda" class="mob-link">Agenda</a>
     <a href="#contato" class="mob-link">Contato</a>
-    <a href="https://wa.me/5569993174022" target="_blank" style="color:var(--gold);border:1px solid rgba(196,154,108,.4);padding:.5rem 1rem;display:inline-block;font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;">Agendar Agora</a>
+    <a href="https://wa.me/5569993174022" target="_blank" rel="noopener noreferrer" class="nav-mobile-cta">Agendar Agora</a>
   </div>
 
   <!-- HERO -->
@@ -85,7 +88,7 @@
       <div class="hero-pretitle">
         <div class="hero-pretitle-line"></div>
         <span class="hero-pretitle-text">Porto Velho · Rondônia</span>
-        <div class="hero-pretitle-line" style="background:linear-gradient(90deg,rgba(196,154,108,.5),transparent)"></div>
+        <div class="hero-pretitle-line hero-pretitle-line--right"></div>
       </div>
       <h1 class="hero-name">
         <span class="hero-name-first">Rebecca</span>
@@ -101,7 +104,7 @@
       </div>
       <div class="hero-btns">
         <a href="#agenda" class="btn-primary">Agendar Horário</a>
-        <a href="https://instagram.com/rebeccacerdeira" target="_blank" class="btn-secondary">
+        <a href="https://www.instagram.com/naildesignerrebecca/" target="_blank" rel="noopener noreferrer" class="btn-secondary">
           <svg class="icon-ig" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
           Instagram
         </a>
@@ -116,7 +119,7 @@
   <!-- SERVICES -->
   <section id="servicos">
     <div class="sep"></div>
-    <div style="padding:8rem 0;background:var(--noir);">
+    <div class="section-block">
       <div class="container">
         <div class="services-header reveal">
           <p class="section-pre">O que ofereço</p>
@@ -134,7 +137,7 @@
               <span class="service-tag">Francesinha</span>
               <span class="service-tag">Gel Color</span>
             </div>
-            <a href="https://wa.me/5569993174022?text=Olá%20Rebecca!%20Quero%20agendar%20Manicure." target="_blank" class="service-link">Agendar <span>→</span></a>
+            <a href="https://wa.me/5569993174022?text=Olá%20Rebecca!%20Quero%20agendar%20Manicure." target="_blank" rel="noopener noreferrer" class="service-link">Agendar <span>→</span></a>
           </div>
           <div class="service-card">
             <div class="service-num">02</div>
@@ -146,7 +149,7 @@
               <span class="service-tag">Hidratação</span>
               <span class="service-tag">Esmaltação</span>
             </div>
-            <a href="https://wa.me/5569993174022?text=Olá%20Rebecca!%20Quero%20agendar%20Pedicure." target="_blank" class="service-link">Agendar <span>→</span></a>
+            <a href="https://wa.me/5569993174022?text=Olá%20Rebecca!%20Quero%20agendar%20Pedicure." target="_blank" rel="noopener noreferrer" class="service-link">Agendar <span>→</span></a>
           </div>
           <div class="service-card">
             <div class="service-num">03</div>
@@ -158,7 +161,7 @@
               <span class="service-tag">Tips</span>
               <span class="service-tag">Manutenção</span>
             </div>
-            <a href="https://wa.me/5569993174022?text=Olá%20Rebecca!%20Quero%20agendar%20Alongamento." target="_blank" class="service-link">Agendar <span>→</span></a>
+            <a href="https://wa.me/5569993174022?text=Olá%20Rebecca!%20Quero%20agendar%20Alongamento." target="_blank" rel="noopener noreferrer" class="service-link">Agendar <span>→</span></a>
           </div>
           <div class="service-card">
             <div class="service-num">04</div>
@@ -170,7 +173,7 @@
               <span class="service-tag">3D art</span>
               <span class="service-tag">Glitter</span>
             </div>
-            <a href="https://wa.me/5569993174022?text=Olá%20Rebecca!%20Quero%20agendar%20Nail%20Art." target="_blank" class="service-link">Agendar <span>→</span></a>
+            <a href="https://wa.me/5569993174022?text=Olá%20Rebecca!%20Quero%20agendar%20Nail%20Art." target="_blank" rel="noopener noreferrer" class="service-link">Agendar <span>→</span></a>
           </div>
         </div>
       </div>
@@ -180,13 +183,13 @@
   <!-- PRICING -->
   <section id="precos">
     <div class="sep"></div>
-    <div style="padding:8rem 0;background:#0E0408;">
+    <div class="section-block section-block--alt">
       <div class="container">
         <div class="pricing-header reveal">
           <p class="section-pre">Investimento</p>
           <h2 class="section-title">Valores</h2>
           <div class="section-line"><span></span><i></i><span></span></div>
-          <p style="margin-top:1.5rem;font-size:.75rem;color:rgba(248,244,239,.3);">Preços válidos para atendimento no ateliê e a domicílio</p>
+          <p class="pricing-note-sub">Preços válidos para atendimento no ateliê e a domicílio</p>
         </div>
         <div class="pricing-list">
           <div class="price-item reveal"><div class="price-dot"></div><div class="price-info"><div class="price-name">Manicure</div><div class="price-desc">Cuidado completo para as mãos</div></div><div class="price-dots-line"></div><div class="price-value">R$ 30,00</div></div>
@@ -201,7 +204,7 @@
         </div>
         <div class="pricing-cta reveal">
           <p class="pricing-note">Dúvidas sobre valores? Fale diretamente comigo.</p>
-          <a href="https://wa.me/5569993174022?text=Olá%20Rebecca!%20Gostaria%20de%20saber%20mais%20sobre%20os%20valores." target="_blank" class="btn-secondary">
+          <a href="https://wa.me/5569993174022?text=Olá%20Rebecca!%20Gostaria%20de%20saber%20mais%20sobre%20os%20valores." target="_blank" rel="noopener noreferrer" class="btn-secondary">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
             Consultar via WhatsApp
           </a>
@@ -213,14 +216,14 @@
   <!-- GALLERY -->
   <section id="galeria">
     <div class="sep"></div>
-    <div style="padding:8rem 0;background:var(--noir);">
+    <div class="section-block">
       <div class="container">
         <div class="gallery-header reveal">
           <div>
             <p class="section-pre">Meus trabalhos</p>
             <h2 class="section-title">Galeria</h2>
           </div>
-          <a href="https://instagram.com/rebeccacerdeira" target="_blank" class="btn-secondary">
+          <a href="https://www.instagram.com/naildesignerrebecca/" target="_blank" rel="noopener noreferrer" class="btn-secondary">
             <svg class="icon-ig" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
             Ver no Instagram
           </a>
@@ -264,17 +267,17 @@
 
   <!-- LIGHTBOX -->
   <div id="lightbox">
-    <button class="lb-close" onclick="closeLightbox()">✕</button>
-    <button class="lb-nav lb-prev" onclick="lbNav(-1)">‹</button>
+    <button class="lb-close" onclick="closeLightbox()" aria-label="Fechar">✕</button>
+    <button class="lb-nav lb-prev" onclick="lbNav(-1)" aria-label="Foto anterior">‹</button>
     <img id="lb-img" src="" alt="" />
-    <button class="lb-nav lb-next" onclick="lbNav(1)">›</button>
+    <button class="lb-nav lb-next" onclick="lbNav(1)" aria-label="Próxima foto">›</button>
     <div class="lb-label" id="lb-label"></div>
   </div>
 
   <!-- BOOKING -->
   <section id="agenda">
     <div class="sep"></div>
-    <div style="padding:8rem 0;background:var(--noir2);">
+    <div class="section-block section-block--noir2">
       <div class="container">
         <div class="booking-header reveal">
           <p class="section-pre">Reserve seu momento</p>
@@ -297,9 +300,9 @@
             </div>
             <div class="cal-days" id="cal-days"></div>
             <div class="cal-legend">
-              <div class="legend-item"><div class="legend-dot" style="background:rgba(196,154,108,.2);border:1px solid rgba(196,154,108,.3);"></div><span class="legend-text">Disponível</span></div>
-              <div class="legend-item"><div class="legend-dot" style="background:var(--gold);"></div><span class="legend-text">Selecionado</span></div>
-              <div class="legend-item"><div class="legend-dot" style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);"></div><span class="legend-text">Indisponível</span></div>
+              <div class="legend-item"><div class="legend-dot legend-dot--available"></div><span class="legend-text">Disponível</span></div>
+              <div class="legend-item"><div class="legend-dot legend-dot--selected"></div><span class="legend-text">Selecionado</span></div>
+              <div class="legend-item"><div class="legend-dot legend-dot--unavailable"></div><span class="legend-text">Indisponível</span></div>
             </div>
             <div class="time-section" id="time-section" style="display:none;">
               <div class="time-title">Horários disponíveis</div>
@@ -315,7 +318,7 @@
               <input type="text" id="f-name" class="form-input" placeholder="Seu nome completo" />
             </div>
             <div class="form-group">
-              <label class="form-label">Serviço * <span style="font-size:.55rem;color:rgba(196,154,108,.4);letter-spacing:.1em;">(pode escolher mais de um)</span></label>
+              <label class="form-label">Serviço * <span class="form-label-hint">(pode escolher mais de um)</span></label>
               <div class="service-checks" id="f-service">
                 <label class="check-item"><input type="checkbox" value="Manicure"><span>Manicure</span></label>
                 <label class="check-item"><input type="checkbox" value="Pedicure"><span>Pedicure</span></label>
@@ -361,7 +364,7 @@
   <!-- CONTACT -->
   <section id="contato">
     <div class="sep"></div>
-    <div style="padding:8rem 0;background:#0E0408;">
+    <div class="section-block section-block--alt">
       <div class="container">
         <div class="contact-header reveal">
           <p class="section-pre">Fale comigo</p>
@@ -369,13 +372,13 @@
           <div class="section-line"><span></span><i></i><span></span></div>
         </div>
         <div class="contact-grid reveal">
-          <a href="https://wa.me/5569993174022" target="_blank" class="contact-card">
+          <a href="https://wa.me/5569993174022" target="_blank" rel="noopener noreferrer" class="contact-card">
             <div class="contact-icon">📍</div>
             <div class="contact-card-label">Localização</div>
             <div class="contact-card-value">Porto Velho, RO</div>
             <div class="contact-card-sub">Atendimento a domicílio disponível</div>
           </a>
-          <a href="https://wa.me/5569993174022" target="_blank" class="contact-card">
+          <a href="https://wa.me/5569993174022" target="_blank" rel="noopener noreferrer" class="contact-card">
             <div class="contact-icon">💬</div>
             <div class="contact-card-label">WhatsApp</div>
             <div class="contact-card-value">+55 69 99317-4022</div>
@@ -387,10 +390,10 @@
             <div class="contact-card-value">Seg–Sex: 9h–19h</div>
             <div class="contact-card-sub">Sábados: 9h–17h</div>
           </div>
-          <a href="https://instagram.com/rebeccacerdeira" target="_blank" class="contact-card">
+          <a href="https://www.instagram.com/naildesignerrebecca/" target="_blank" rel="noopener noreferrer" class="contact-card">
             <div class="contact-icon">📷</div>
             <div class="contact-card-label">Instagram</div>
-            <div class="contact-card-value">@rebeccacerdeira</div>
+            <div class="contact-card-value">@naildesignerrebecca</div>
             <div class="contact-card-sub">Veja meus trabalhos</div>
           </a>
         </div>
@@ -399,7 +402,7 @@
           <div class="cta-corner-bl"></div>
           <h3 class="cta-title">Pronta para se cuidar?</h3>
           <p class="cta-sub">Agende seu horário agora mesmo e reserve um momento só seu.</p>
-          <a href="https://wa.me/5569993174022?text=Olá%20Rebecca!%20Gostaria%20de%20agendar%20um%20horário." target="_blank" class="btn-primary">
+          <a href="https://wa.me/5569993174022?text=Olá%20Rebecca!%20Gostaria%20de%20agendar%20um%20horário." target="_blank" rel="noopener noreferrer" class="btn-primary">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
             Falar pelo WhatsApp
           </a>
@@ -428,7 +431,7 @@
   </footer>
 
   <!-- WHATSAPP FLOAT -->
-  <a id="whatsapp-float" href="https://wa.me/5569993174022?text=Olá%20Rebecca!%20Vim%20pelo%20site." target="_blank" aria-label="WhatsApp">
+  <a id="whatsapp-float" href="https://wa.me/5569993174022?text=Olá%20Rebecca!%20Vim%20pelo%20site." target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
     <svg class="icon-wa" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
   </a>
 
@@ -442,7 +445,8 @@
     const burger = document.getElementById('burger')
     const mobileMenu = document.getElementById('mobile-menu')
     burger.addEventListener('click', () => mobileMenu.classList.toggle('open'))
-    document.querySelectorAll('.mob-link').forEach(l => l.addEventListener('click', () => mobileMenu.classList.remove('open')))
+    // fecha o menu ao clicar em qualquer link, incluindo o botão CTA
+    document.querySelectorAll('.mob-link, .nav-mobile-cta').forEach(l => l.addEventListener('click', () => mobileMenu.classList.remove('open')))
 
     // ── SCROLL REVEAL ──
     const revealObs = new IntersectionObserver(entries => {
@@ -469,6 +473,7 @@
     function openLightbox(i) {
       lbIndex = i
       document.getElementById('lb-img').src = photos[i].src
+      document.getElementById('lb-img').alt = photos[i].label
       document.getElementById('lb-label').textContent = `${photos[i].label} — ${i+1}/${photos.length}`
       document.getElementById('lightbox').classList.add('open')
       document.body.style.overflow = 'hidden'
@@ -480,6 +485,7 @@
     function lbNav(dir) {
       lbIndex = (lbIndex + dir + photos.length) % photos.length
       document.getElementById('lb-img').src = photos[lbIndex].src
+      document.getElementById('lb-img').alt = photos[lbIndex].label
       document.getElementById('lb-label').textContent = `${photos[lbIndex].label} — ${lbIndex+1}/${photos.length}`
     }
     document.getElementById('lightbox').addEventListener('click', e => { if (e.target === e.currentTarget) closeLightbox() })
@@ -585,9 +591,9 @@
       }
       errEl.classList.remove('show')
       const locLabel = selectedLoc === 'atelier' ? 'Na Rebecca (ateliê)' : 'A domicílio (minha casa)'
-      var partes = selectedDate.split('-')
-      var dataFormatada = partes[2] + '/' + partes[1] + '/' + partes[0]
-      var linhas = []
+      const partes = selectedDate.split('-')
+      const dataFormatada = partes[2] + '/' + partes[1] + '/' + partes[0]
+      const linhas = []
       linhas.push(' *Agendamento — Rebecca Cerdeira*')
       linhas.push('')
       linhas.push(' *Nome:* ' + name)
@@ -598,12 +604,14 @@
       if (obs) linhas.push(' *Obs:* ' + obs)
       linhas.push('')
       linhas.push('Aguardo confirmação! ')
-      var msg = linhas.join('\n')
+      const msg = linhas.join('\n')
       window.open('https://wa.me/5569993174022?text=' + encodeURIComponent(msg), '_blank')
       const btn = document.getElementById('btn-submit')
+      btn.disabled = true   // evita duplo envio durante os 5s
       btn.classList.add('success')
       btn.innerHTML = '✓ &nbsp; Enviado! WhatsApp aberto.'
       setTimeout(() => {
+        btn.disabled = false
         btn.classList.remove('success')
         btn.innerHTML = `<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg> Confirmar via WhatsApp`
         document.getElementById('f-name').value = ''
