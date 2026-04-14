@@ -171,7 +171,8 @@ body::before {
 }
 
 /* ── 8. HERO ── */
-#hero { min-height: 100vh; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; text-align: center; }
+/* iOS Safari: 100vh exclui a barra de endereço — 100dvh resolve isso (suporte: Safari 15.4+) */
+#hero { min-height: 100vh; min-height: 100dvh; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; text-align: center; }
 .hero-bg    { position: absolute; inset: 0; background: var(--noir); }
 .hero-glow  { position: absolute; top: 35%; left: 50%; transform: translate(-50%, -50%); width: 700px; height: 700px; border-radius: 50%; background: radial-gradient(circle, rgba(155,122,82,.07) 0%, transparent 70%); pointer-events: none; }
 .hero-grid  { position: absolute; inset: 0; opacity: .025; background-image: linear-gradient(rgba(155,122,82,.5) 1px, transparent 1px), linear-gradient(90deg, rgba(155,122,82,.5) 1px, transparent 1px); background-size: 60px 60px; }
@@ -354,6 +355,9 @@ body::before {
 .check-item input[type=checkbox]:checked { background: var(--gold); border-color: var(--gold); }
 .check-item input[type=checkbox]:checked::after { content: ''; position: absolute; top: 2px; left: 4px; width: 4px; height: 7px; border: 1.5px solid var(--noir); border-top: none; border-left: none; transform: rotate(45deg); }
 .check-item span { font-size: .75rem; color: rgba(26,20,16,.55); font-family: var(--font-body); font-weight: 300; transition: color .2s; }
+/* Fallback para iOS Safari < 15.4 que não suporta :has() — classe .checked aplicada via JS */
+.check-item.checked { border-color: rgba(155,122,82,.4); background: rgba(155,122,82,.08); }
+.check-item.checked span { color: var(--gold); }
 .check-item:has(input:checked) { border-color: rgba(155,122,82,.4); background: rgba(155,122,82,.08); }
 .check-item:has(input:checked) span { color: var(--gold); }
 
@@ -388,7 +392,8 @@ footer           { background: var(--noir); border-top: 1px solid rgba(155,122,8
 .footer-copy      { font-size: .6rem; color: rgba(26,20,16,.3); letter-spacing: .1em; }
 
 /* ── 17. WHATSAPP FLUTUANTE ── */
-#whatsapp-float { position: fixed; bottom: 2rem; right: 2rem; width: 56px; height: 56px; background: var(--gold); display: flex; align-items: center; justify-content: center; z-index: 90; text-decoration: none; transition: background .3s; animation: pulse-gold 2.5s infinite; }
+/* safe-area-inset-bottom: evita que o botão fique atrás da barra home no iPhone */
+#whatsapp-float { position: fixed; bottom: 2rem; bottom: calc(2rem + env(safe-area-inset-bottom)); right: 2rem; width: 56px; height: 56px; background: var(--gold); display: flex; align-items: center; justify-content: center; z-index: 90; text-decoration: none; transition: background .3s; animation: pulse-gold 2.5s infinite; }
 #whatsapp-float:hover { background: var(--gold-light); }
 @keyframes pulse-gold { 0%, 100% { box-shadow: 0 0 0 0 rgba(155,122,82,.5); } 50% { box-shadow: 0 0 0 14px rgba(155,122,82,0); } }
 
@@ -398,6 +403,12 @@ footer           { background: var(--noir); border-top: 1px solid rgba(155,122,8
 
 @media (min-width: 1024px) {
   .container { padding: 0 3rem; }
+}
+
+/* Tablet paisagem (entre 768 e 900px) — breakpoint que estava faltando */
+@media (max-width: 860px) and (min-width: 769px) {
+  /* Galeria principal: rows mais baixas para não ficar muito alto */
+  .gallery-grid { grid-template-rows: repeat(2, 220px); }
 }
 
 @media (max-width: 900px) {
@@ -418,5 +429,43 @@ footer           { background: var(--noir); border-top: 1px solid rgba(155,122,8
 }
 
 @media (max-width: 480px) {
+  /* Fontes muito pequenas — mínimo legível no mobile */
+  .section-pre,
+  .hero-pretitle-text,
+  .hero-sub,
+  .hero-scroll-text,
+  .service-tag,
+  .service-link,
+  .btn-primary,
+  .btn-secondary,
+  .nav-links a,
+  .nav-cta,
+  .nav-mobile a,
+  .form-label,
+  .form-label-hint,
+  .time-title,
+  .price-desc,
+  .footer-links a,
+  .footer-copy,
+  .footer-logo-sub,
+  .pricing-note,
+  .legend-text,
+  .contact-card-label,
+  .contact-card-sub { font-size: .75rem; letter-spacing: .1em; }
+
+  /* Contato: 1 coluna em mobile pequeno */
   .contact-grid { grid-template-columns: 1fr; }
+
+  /* Galeria extra: 5 colunas → 3 colunas em telas pequenas */
+  .gallery-extra { grid-template-columns: repeat(3, 1fr); }
+  .gallery-extra-item { height: 100px; }
+
+  /* Calendário: evita overflow horizontal em telas < 360px */
+  .cal-days, .cal-weekdays { overflow-x: auto; }
+
+  /* Data/hora readonly: 2 colunas → 1 coluna em telas muito pequenas */
+  .form-readonly { grid-template-columns: 1fr; }
+
+  /* Legenda do calendário: empilha itens */
+  .cal-legend { flex-direction: column; gap: .75rem; }
 }

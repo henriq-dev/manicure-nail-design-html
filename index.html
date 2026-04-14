@@ -8,7 +8,7 @@
   <meta name="keywords" content="manicure porto velho, nail design rondônia, alongamento unhas, nail art, Rebecca Cerdeira" />
 
   <!-- Favicon -->
-  <link rel="icon" href="up-ft-logo-link/logo/unha.ico" type="image/jpeg" />
+  <link rel="icon" href="up-ft-logo-link/logo/unha.ico" type="image/x-icon" />
 
   <!-- Open Graph — aparece ao compartilhar o link no WhatsApp/Instagram -->
   <meta property="og:type"        content="website" />
@@ -33,7 +33,7 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
 
   <!-- Estilo -->
   <link rel="stylesheet" href="estilo/estilo.css" />
@@ -449,6 +449,14 @@
     // fecha o menu ao clicar em qualquer link, incluindo o botão CTA
     document.querySelectorAll('.mob-link, .nav-mobile-cta').forEach(l => l.addEventListener('click', () => mobileMenu.classList.remove('open')))
 
+    // ── FALLBACK :has() para iOS Safari < 15.4 ──
+    // Safari antigo não suporta :has() — aplicamos a classe "checked" via JS como alternativa
+    document.querySelectorAll('.check-item input[type=checkbox]').forEach(cb => {
+      cb.addEventListener('change', () => {
+        cb.closest('.check-item').classList.toggle('checked', cb.checked)
+      })
+    })
+
     // ── SCROLL REVEAL ──
     const revealObs = new IntersectionObserver(entries => {
       entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible') })
@@ -607,7 +615,13 @@
       linhas.push('')
       linhas.push('Aguardo confirmação! ')
       const msg = linhas.join('\n')
-      window.open('https://wa.me/5569993174022?text=' + encodeURIComponent(msg), '_blank')
+      /* iOS Safari bloqueia window.open() se não for disparado por toque direto.
+         Usar <a>.click() síncrono resolve o problema sem popup bloqueado. */
+      const waLink = document.createElement('a')
+      waLink.href = 'https://wa.me/5569993174022?text=' + encodeURIComponent(msg)
+      waLink.target = '_blank'
+      waLink.rel = 'noopener noreferrer'
+      waLink.click()
       const btn = document.getElementById('btn-submit')
       btn.disabled = true   // evita duplo envio durante os 5s
       btn.classList.add('success')
